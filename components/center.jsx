@@ -2,7 +2,7 @@ import React from 'react'
 import { HeartIcon, IdentificationIcon, BriefcaseIcon } from '@heroicons/react/solid'
 import Footer from './footer'
 import Link from 'next/link'
-import Hire_drop from './hire_dropdown'
+import Hire_drop from './dialogue'
 
 
 const Center = () => {
