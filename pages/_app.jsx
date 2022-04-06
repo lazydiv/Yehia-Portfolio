@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, router }) {
       
     
       <Canvas shadows className='mt-32'  dpr={[1, 2]} camera={{ fov: 50 }}>
-        <Suspense  fallback={<p>Loading...</p>}>
+        <Suspense  fallback={<h1>Loading...</h1>}>
           <Stage controls={ref} preset="rembrandt" intensity={0.75}  environment="">
             <Model />
           </Stage>
