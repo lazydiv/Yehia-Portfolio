@@ -1,7 +1,7 @@
 import '../styles/style.css'
 import { ThemeProvider } from 'next-themes'
 import Header from '../components/header'
-import Model from './Model'
+import Model from '../components/Model'
 import { motion, AnimatePresence } from "framer-motion"
 import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
