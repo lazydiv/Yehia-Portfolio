@@ -32,8 +32,7 @@ export default function Model(props) {
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.Icosphere004_Icosphere005.geometry}
-        material={nodes.Icosphere004_Icosphere005.material}
+        geometr
       />
       <mesh
         castShadow
