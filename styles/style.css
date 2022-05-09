@@ -8,6 +8,15 @@ body{
     
     padding: 0
 }
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+
+}
 body::-webkit-scrollbar {
     width: 5px;
   }

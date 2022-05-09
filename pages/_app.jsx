@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage } from '@react-three/drei'
+import ParicleBackground from '../components/ParicleBackground'
 
 function MyApp({ Component, pageProps: { session, ...pageProps }, router }) {
   const ref = useRef()
@@ -20,17 +21,17 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, router }) {
 
         <Header />
         
-      
-    
-      <Canvas shadows className='mt-32'  dpr={[1, 2]} camera={{ fov: 50 }}>
+        <ParicleBackground />
+
+
+      <Canvas shadows    className='mt-32'  dpr={[1, 2]} camera={{ fov: 50 }}>
         <Suspense  fallback={null}>
-          <Stage controls={ref} preset="rembrandt" intensity={0.75}  environment="">
+          <Stage  controls={ref} preset="rembrandt"  intensity={0.75}  environment="">
             <Model />
           </Stage>
         </Suspense>
-        <OrbitControls minZoom="5" ref={ref} autoRotate autoRotateSpeed={2} />
+        <OrbitControls  zoomSpeed={1} ref={ref} autoRotate autoRotateSpeed={2}/>
       </Canvas>
-
 
       <AnimatePresence exitBeforeEnter initial={true}>
       <motion.main
@@ -44,7 +45,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps }, router }) {
       >
     
 
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       </motion.main>
       </AnimatePresence>
       </ThemeProvider>
