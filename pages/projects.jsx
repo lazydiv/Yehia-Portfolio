@@ -21,7 +21,7 @@ function Projects() {
   if (!data) return <p>No profile data</p>
   
 
-  const item = data.map((item)=><div className='flex-col backdrop-blur-sm text-left shadow-lg lg:w-5/6 mx-auto bg-black bg-opacity-5 dark:bg-black dark:bg-opacity-10 rounded-xl p-5' key=''>
+  const item = data.map((item)=><div className='flex-col backdrop-blur-sm text-left shadow-lg w-full lg:w-5/6 mx-auto bg-black bg-opacity-5 dark:bg-black dark:bg-opacity-10 rounded-xl p-5' key=''>
                 <p className='mb-5 text-xl'>{item.name}</p>
                 <p className='text-lg md:w-5/6'>{item.description}</p>
                 <p className='text-xs bg-black bg-opacity-5 dark:bg-white dark:bg-opacity-10 text-center mt-2 w-[90px] py-1 rounded-md'>{item.language}</p>
